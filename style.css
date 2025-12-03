@@ -1,0 +1,115 @@
+/* ---------- font ---------- */
+@font-face {
+  font-family: "Sohne bunch";
+  src: url("font/sohne/TestSohne-Buch-400.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Sohne Kraftig";
+  src: url("font/sohne/TestSohne-Kraftig-500.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Sohne Dreiviertelfett";
+  src: url("font/sohne/TestSohne-Dreiviertelfett-700.otf") format("opentype");
+  font-weight: 700;
+}
+
+/* ---------- font ---------- */
+
+/* ---------- 노말라이즈 ---------- */
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* ---------- 노말라이즈 ---------- */
+
+/* ---------- lib ---------- */
+:root {
+  --bg-color: #f3edde;
+  --text-bl-color: #111;
+  --text-gr-color: #e2e2e2;
+  --sub1-color: #dd0000;
+}
+
+.con {
+  max-width: 1800px;
+  margin-inline: auto;
+}
+
+.img-box > img {
+  width: 100%;
+  display: block;
+}
+/* ---------- lib ---------- */
+
+/* ---------- cos ---------- */
+body {
+  background-color: var(--bg-color);
+}
+/* ---------- cos ---------- */
+
+/* ---------- header ---------- */
+header {
+  font-family: "Sohne bunch";
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header > .logo_wrap {
+  width: 140px;
+}
+header > .menu_wrap {
+  display: flex;
+  gap: 40px;
+}
+/* ---------- header ---------- */
+
+/* ---------- main ---------- */
+main {
+  margin-top: 80px;
+}
+
+/* ----- sec_hero ----- */
+.sec_hero {
+  height: 100vh;
+}
+.sec_hero > .main_title {
+  margin-top: 150px;
+}
+.sec_hero > .main_title > h3 {
+  font-family: "Sohne Kraftig";
+  font-size: 48px;
+  color: var(--sub1-color);
+  margin: 0;
+}
+.sec_hero > .main_title > h2 {
+  font-family: "Sohne Dreiviertelfett";
+  font-size: 250px;
+  color: var(--text-bl-color);
+  margin: 0;
+}
+.sec_hero > .sub_text > p {
+  font-family: "Sohne bunch";
+  font-size: 32px;
+  margin: 0;
+}
+/* ----- sec_hero -----*/
+
+/* ---------- main ---------- */
