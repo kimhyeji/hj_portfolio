@@ -1,16 +1,19 @@
 /* ---------- font ---------- */
 @font-face {
+  font-family: "Sohne Leicht";
+  src: url("font/sohne/TestSohne-Buch-400.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
   font-family: "Sohne bunch";
   src: url("font/sohne/TestSohne-Buch-400.otf") format("opentype");
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Sohne Kraftig";
   src: url("font/sohne/TestSohne-Kraftig-500.otf") format("opentype");
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Sohne Dreiviertelfett";
   src: url("font/sohne/TestSohne-Dreiviertelfett-700.otf") format("opentype");
@@ -36,17 +39,31 @@ a {
 
 /* ---------- lib ---------- */
 :root {
-  --bg-color: #f3edde;
+  --main-bg-color: #111;
+  --sub-bg-color: #f3edde;
   --text-bl-color: #111;
   --text-gr-color: #e2e2e2;
   --sub1-color: #dd0000;
 }
-
-.con {
-  max-width: 1800px;
-  margin-inline: auto;
+::-webkit-scrollbar {
+  width: 10px;
 }
-
+::-webkit-scrollbar-thumb {
+  background: var(--main-bg-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+.con-min-width {
+  max-width: 1920px;
+  overflow-x: hidden;
+}
+.con {
+  max-width: 1920px;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
 .img-box > img {
   width: 100%;
   display: block;
@@ -55,13 +72,13 @@ a {
 
 /* ---------- cos ---------- */
 body {
-  background-color: var(--bg-color);
+  background-color: var(--sub-bg-color);
 }
 /* ---------- cos ---------- */
 
 /* ---------- header ---------- */
 header {
-  font-family: "Sohne bunch";
+  font-family: "Sohne Kraftig";
   width: 100%;
   height: 80px;
   display: flex;
@@ -83,32 +100,52 @@ header > .menu_wrap {
 
 /* ---------- main ---------- */
 main {
-  margin-top: 80px;
+  position: relative;
 }
 
 /* ----- sec_hero ----- */
 .sec_hero {
   height: 100vh;
 }
+.sec_hero > .bg-ring {
+  position: absolute;
+  z-index: -1;
+}
+.sec_hero > .bg-ring-top {
+  width: 600px;
+  left: -200px;
+  top: -300px;
+  transform: rotate(-160deg);
+}
+.sec_hero > .bg-ring-bottom {
+  width: 1100px;
+  right: 0;
+  top: -50px;
+}
 .sec_hero > .main_title {
-  margin-top: 150px;
+  margin-top: 250px;
 }
 .sec_hero > .main_title > h3 {
-  font-family: "Sohne Kraftig";
-  font-size: 48px;
-  color: var(--sub1-color);
+  font-family: "Sohne Leicht";
+  font-size: 64px;
+  color: var(--text-bl-color);
   margin: 0;
 }
 .sec_hero > .main_title > h2 {
   font-family: "Sohne Dreiviertelfett";
-  font-size: 250px;
+  font-size: 200px;
   color: var(--text-bl-color);
-  margin: 0;
+  margin: 20px 0 0 -15px;
+  letter-spacing: -5px;
+  line-height: 170px;
+  display: inline-block;
 }
-.sec_hero > .sub_text > p {
-  font-family: "Sohne bunch";
-  font-size: 32px;
-  margin: 7px 0;
+.sec_hero > .main_title > p {
+  font-family: "Sohne Kraftig";
+  font-size: 48px;
+  color: var(--sub1-color);
+  display: inline-block;
+  margin-left: 20px;
 }
 /* ----- sec_hero -----*/
 
